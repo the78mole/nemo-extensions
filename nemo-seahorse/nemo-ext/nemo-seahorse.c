@@ -218,7 +218,7 @@ seahorse_nemo_get_file_items (NemoMenuProvider *provider,
 
     /* Encrypted files get decrypt menu */
     if (is_all_encrypted_files (files)) {
-        item = nemo_menu_item_new ("NemoSh::decrypt", _("Decrypt"),
+        item = nemo_menu_item_new ("NemoSh::decrypt", _("Decrypt..."),
             ngettext ("Decrypt the selected file", "Decrypt the selected files", num), NULL);
         g_object_set_data_full (G_OBJECT (item), "files", nemo_file_info_list_copy (files),
                                      (GDestroyNotify) nemo_file_info_list_free);
